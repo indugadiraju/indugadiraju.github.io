@@ -80,10 +80,20 @@ h2 {
   letter-spacing: -0.01em;
 }
 
-p,
-li {
+p {
   margin: 0;
   color: var(--muted);
+}
+
+li {
+  margin: 0 0 8px 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+li:last-child {
+  margin-bottom: 0;
 }
 
 .lede {
@@ -100,7 +110,7 @@ li {
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
+  gap: 24px;
 }
 
 @media (max-width: 640px) {
@@ -119,6 +129,96 @@ li {
 .card h3 {
   margin: 0 0 6px;
   font-size: 18px;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-header {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.project-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.dropdown-btn {
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: var(--muted);
+  cursor: pointer;
+  padding: 4px 8px;
+  transition: transform 0.2s ease, color 0.2s ease;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.dropdown-btn:hover {
+  color: var(--text);
+}
+
+.project-card.active .dropdown-btn {
+  transform: rotate(180deg);
+}
+
+.project-links {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.link-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: #fff;
+  color: var(--muted);
+  font-size: 16px;
+  text-decoration: none;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.link-btn[href="___"] {
+  opacity: 0.3;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.link-btn:hover:not([href="___"]) {
+  background: var(--panel);
+  border-color: var(--text);
+  color: var(--text);
+  text-decoration: none;
+}
+
+.project-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, margin-top 0.3s ease;
+  margin-top: 0;
+}
+
+.project-card.active .project-content {
+  max-height: 2000px;
+  margin-top: 16px;
+}
+
+.project-card ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0 0 12px 0;
 }
 
 .meta {
@@ -154,3 +254,4 @@ li {
   font-size: 14px;
   color: var(--muted);
 }
+
