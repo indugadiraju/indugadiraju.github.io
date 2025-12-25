@@ -230,6 +230,11 @@ li:last-child {
 /* Carousel Styles */
 .carousel-container {
   margin-bottom: 20px;
+  margin-top: 16px;
+}
+
+.carousel-compact .carousel-slide img {
+  max-height: 200px;
 }
 
 .carousel-wrapper {
@@ -322,10 +327,15 @@ li:last-child {
   width: 100%;
   height: 220px;
   margin-top: 16px;
+  margin-bottom: 0;
   border-radius: 8px;
   overflow: hidden;
   background: var(--panel);
   border: 1px solid var(--border);
+}
+
+.model-container + .carousel-container {
+  margin-top: 12px;
 }
 
 .meta {
