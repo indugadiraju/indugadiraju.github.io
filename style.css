@@ -33,7 +33,7 @@ a:hover {
 }
 
 .page {
-  max-width: 880px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 48px 16px 72px;
 }
@@ -124,6 +124,22 @@ li:last-child {
   border-radius: 14px;
   padding: 18px 20px;
   background: #fff;
+}
+
+.project-mast {
+  background: #cceaf0;
+}
+
+.project-tom {
+  background: #c9d5ff;
+}
+
+.project-genesisxr {
+  background: #e3daed;
+}
+
+.project-fuse {
+  background: #eddaea;
 }
 
 .card h3 {
