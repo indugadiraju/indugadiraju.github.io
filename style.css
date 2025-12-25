@@ -92,6 +92,11 @@ li {
   line-height: 1.5;
 }
 
+.project-content p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
 li:last-child {
   margin-bottom: 0;
 }
