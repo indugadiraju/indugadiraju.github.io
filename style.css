@@ -91,10 +91,16 @@ nav a[aria-current="page"] {
 
 h1 {
   margin: 0 0 12px;
-  font-size: clamp(28px, 4vw, 36px);
+  font-size: clamp(36px, 5vw, 48px);
   letter-spacing: -0.02em;
   color: #013b70;
   text-align: center;
+}
+
+section#home h1 {
+  font-family: "Playfair Display", serif;
+  font-weight: 900;
+  font-size: clamp(42px, 6vw, 56px);
 }
 
 h2 {
@@ -152,11 +158,12 @@ li:last-child {
   font-size: 18px;
   line-height: 1.5;
   color: var(--text);
-  padding: 0 2px;
+  padding: 0;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   gap: 16px;
+  padding-left: 0;
 }
 
 .previously-list li::before {
@@ -164,6 +171,12 @@ li:last-child {
   color: var(--text);
   margin-right: 8px;
   flex-shrink: 0;
+  width: 16px;
+  text-align: left;
+}
+
+.previously-list li div {
+  flex: 1;
 }
 
 .previously-list li .experience-date {
@@ -175,10 +188,10 @@ li:last-child {
 }
 
 .previously-list li i {
-  font-size: 16px;
+  font-size: 15px;
   font-style: italic;
-  display: block;
-  margin-top: 2px;
+  display: inline;
+  margin-left: 8px;
   padding-left: 0;
   color: #64748b;
 }
@@ -206,8 +219,8 @@ section:not([id]) {
 
 .section-divider {
   border: none;
-  border-top: 1px solid #d67900;
-  margin: 32px 0;
+  border-top: 1px solid var(--border);
+  margin: 16px 0;
   width: 100%;
 }
 
@@ -489,6 +502,7 @@ section.stack h2 {
 
 section.stack {
   margin-bottom: 0;
+  margin-top: 8px;
 }
 
 .pill {
