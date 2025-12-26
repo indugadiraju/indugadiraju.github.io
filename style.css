@@ -97,8 +97,12 @@ h1 {
   text-align: center;
 }
 
+section#home h1 {
+  font-size: clamp(48px, 7vw, 64px);
+}
+
 h2 {
-  margin: 8px 0 12px;
+  margin: 4px 0 12px;
   font-size: 20px;
   letter-spacing: -0.01em;
   color: #013b70;
@@ -203,8 +207,8 @@ li:last-child {
 }
 
 section[id] {
-  margin-top: 24px;
-  margin-bottom: 24px;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 section[id]:first-of-type {
@@ -215,6 +219,11 @@ section[id]:first-of-type {
 section:not([id]) {
   margin-top: 0;
   margin-bottom: 0;
+}
+
+/* Extra spacing between Reach Me and Experience */
+section#experience {
+  margin-top: 48px;
 }
 
 .section-divider {
@@ -497,6 +506,7 @@ section:not([id]) {
 
 section.stack h2 {
   text-align: center;
+  margin-top: 0;
   margin-bottom: 4px;
 }
 
