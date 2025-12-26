@@ -72,12 +72,14 @@ h1 {
   margin: 0 0 12px;
   font-size: clamp(28px, 4vw, 36px);
   letter-spacing: -0.02em;
+  color: #013b70;
 }
 
 h2 {
   margin: 32px 0 12px;
   font-size: 20px;
   letter-spacing: -0.01em;
+  color: #013b70;
 }
 
 p {
@@ -103,6 +105,29 @@ li:last-child {
 
 .lede {
   font-size: 18px;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.intro-link {
+  color: #d67900;
+  text-decoration: none;
+}
+
+.intro-link:hover {
+  text-decoration: underline;
+}
+
+.previously-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.previously-list li {
+  margin-bottom: 12px;
+  font-size: 16px;
+  line-height: 1.6;
   color: var(--text);
 }
 
@@ -378,6 +403,16 @@ li:last-child {
   padding: 4px 10px;
   font-size: 13px;
   color: var(--muted);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pill img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  display: block;
 }
 
 .footer {
