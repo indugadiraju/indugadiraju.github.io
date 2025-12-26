@@ -1,5 +1,9 @@
 
 /* Minimal, white-first layout */
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   color-scheme: light;
   --text: #0f172a;
@@ -17,18 +21,12 @@
 
 body {
   margin: 0;
-  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-family: system-ui, -apple-system, sans-serif;
   background: #ffffff;
   color: var(--text);
   line-height: 1.7;
 }
 
-/* Custom font classes - add your Google Fonts here */
-/* Example:
-.custom-font {
-  font-family: "YourFontName", sans-serif;
-}
-*/
 
 a {
   color: inherit;
@@ -66,10 +64,12 @@ header {
 .brand {
   font-weight: 700;
   letter-spacing: 0.02em;
-  font-family: "Shrikhand", serif;
-  font-weight: 400;
-  font-size: 28px;
-  font-style: normal;
+}
+
+.brand img {
+  height: 32px;
+  width: auto;
+  display: block;
 }
 
 nav {
