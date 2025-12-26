@@ -136,6 +136,10 @@ li:last-child {
   margin-bottom: 4px;
 }
 
+section#projects .lede {
+  margin-bottom: 20px;
+}
+
 .intro-link {
   color: #d67900;
   text-decoration: underline;
@@ -238,6 +242,7 @@ section#experience {
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
   align-items: start;
+  margin-top: 20px;
 }
 
 @media (max-width: 640px) {
