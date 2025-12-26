@@ -30,6 +30,11 @@ body {
 }
 */
 
+.libre-baskerville,
+.libre-baskerville * {
+  font-family: "Libre Baskerville", serif;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -68,6 +73,7 @@ header {
   letter-spacing: 0.02em;
   font-family: "Shrikhand", serif;
   font-weight: 400;
+  font-size: 28px;
   font-style: normal;
 }
 
@@ -95,11 +101,16 @@ h1 {
   color: #013b70;
 }
 
+h1 {
+  text-align: center;
+}
+
 h2 {
   margin: 8px 0 12px;
   font-size: 20px;
   letter-spacing: -0.01em;
   color: #013b70;
+  text-align: center;
 }
 
 p {
@@ -141,7 +152,7 @@ li:last-child {
 .previously-list {
   list-style: disc;
   padding-left: 20px;
-  margin: 0;
+  margin: 24px 0 0 0;
 }
 
 .previously-list li {
@@ -159,6 +170,7 @@ li:last-child {
   display: block;
   margin-top: 2px;
   padding-left: 0;
+  color: #64748b;
 }
 
 .stack {
@@ -430,6 +442,11 @@ li:last-child {
 
 section.stack h2 {
   text-align: center;
+  margin-bottom: 6px;
+}
+
+section.stack {
+  margin-bottom: 24px;
 }
 
 .pill {
@@ -463,6 +480,15 @@ section.stack h2 {
 
 .footer {
   margin-top: 48px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+footer {
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  text-align: center;
   font-size: 14px;
   color: var(--muted);
 }
