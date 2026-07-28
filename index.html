@@ -5,383 +5,110 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Indu Gadiraju</title>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>" />
+    <link rel="icon" type="image/png" href="website_favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="/style.css" />
     <script src="/script.js" defer></script>
-    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
   </head>
-  <body>
+  <body class="home">
     <div class="page">
       <header>
-        <div class="brand"><img src="assets/name.png" alt="Indu Gadiraju" /></div>
+        <div class="brand">
+          <div>Indu</div>
+          <div>Gadiraju</div>
+        </div>
         <nav>
-          <a href="#home">Home</a>
-          <a href="#experience">Experience</a>
-          <a href="#projects">Projects</a>
-          <a href="#writing">Writing</a>
+          <a href="index.html" aria-current="page">Home</a>
+          <a href="projects.html">Projects</a>
+          <a href="writing.html">Writing</a>
+          <a href="film.html">Film & Photo</a>
         </nav>
       </header>
 
       <main class="stack">
-
         <!---------------------------------------------- HOME ----------------------------------------------->
         <section id="home">
-          <h1>Hi, I'm Indu 👋 </h1>
-          <p class="lede">
-            I'm a student at Stanford studying computer science (AI), math, and philosophy.
-          </p>
-          <p class="lede">
-            I grew up just outside of Charlotte, North Carolina, where I spent a lot of time tinkering, building, and working with my local community – learning how technology can meaningfully serve people at large scales.
-          </p>
-          <p class="lede">
-            I'm especially interested in applied AI, embedded systems and robotics, environmental sensing, and building technology with tangible community impact – which I've explored through <a href="#projects" class="intro-link"> a range of projects</a>. Beyond tech, I enjoy <a href="#writing" class="intro-link"> writing</a>, design, entrepreneurship, and interdisciplinary detours.
-          </p>
+          <h1>Hey, I'm Indu.</h1>
+          <div class="home-content">
+            <div class="headshot-container">
+              <img
+                src="assets/headshot.png"
+                alt="Headshot of Indu Gadiraju"
+                class="headshot"
+              />
+            </div>
+            <div class="home-paragraphs">
+              <p class="lede">
+                I'm a student at Stanford studying computer science (AI), math,
+                and philosophy.
+              </p>
+              <p class="lede">
+                I grew up just outside of Charlotte, North Carolina, where I
+                spent a lot of time tinkering, building, and working with my
+                local community – learning how technology can meaningfully serve
+                people at large scales.
+              </p>
+              <p class="lede">
+                I'm especially interested in applied AI, embedded systems and
+                robotics, environmental sensing, and building technology with
+                tangible community impact – which I've explored through
+                <a href="#projects" class="intro-link"> a range of projects</a>.
+                Beyond tech, I enjoy
+                <a href="#writing" class="intro-link"> writing</a>, design,
+                novice photography, and interdisciplinary detours.
+              </p>
+            </div>
+          </div>
         </section>
-
-        <!---------------------------------------------- REACH ME ----------------------------------------------->
-        <section class="stack">
-          <h2> Reach Me </h2>
-          <div class="pill-row">
-            <a class="pill" href="mailto:indugadi@stanford.edu" title="Email"><img src="assets/logos/email-logo.png" alt="Email" /><span>indugadi [at] stanford [dot] edu</span></a>
-            <a class="pill" href="https://www.linkedin.com/in/indugadiraju/" title="LinkedIn"><img src="assets/logos/linkedin-logo.png" alt="LinkedIn" /><span>LinkedIn</span></a>
-            <a class="pill" href="https://github.com/indugadiraju" title="GitHub"><img src="assets/logos/github-logo.png" alt="GitHub" /><span>GitHub</span></a>
-            <a class="pill" href="https://indugadiraju.substack.com/" title="Substack"><img src="assets/logos/substack-logo.png" alt="Substack" /><span>Substack</span></a>
-            <a class="pill" href="https://x.com/indugadiraju" title="X"><img src="assets/logos/x-logo.png" alt="X" /><span>X</span></a>
-            <a class="pill" href="https://devpost.com/indugadiraju" title="Devpost"><img src="assets/logos/devpost-logo.png" alt="Devpost" /><span>Devpost</span></a>
-          </div>
-        </section>
-
-        <!---------------------------------------------- EXPERIENCE ----------------------------------------------->
-        <section id="experience">
-          <h1>Experience</h1>
-          <ul class="previously-list">
-            <li> <div><div class="experience-title-row">Hardware & Signal Processing Research @ Stanford Landay Lab <span class="experience-date">Jan. 2026 - Present</span></div><i>Protoyping novel, wearable, and non-invasive piezoelectric sensors for cardiovascular health monitoring. </i></div> </li>
-            <li> <div><div class="experience-title-row">Product Engineer @ Stealth Startup <span class="experience-date">Jan. 2026 - Present</span></div><i> Building an AI-powered holistic admissions platform. </i></div> </li>
-            <li> <div><div class="experience-title-row">Intern @ Stanford Women in Computer Science <span class="experience-date">Oct. 2025 - Present</span></div><i>Support the sponsorships and finance team to expand community and corporate partnerships.</i></div> </li>
-            <li> <div><div class="experience-title-row">GTM & Growth Operations @ Code Four (YC X25) <span class="experience-date">July 2025 - Oct. 2025</span></div><i>All things growth, strategy, and customer acquisition for an AI copilot for police.</i></div> </li>
-            <li> <div><div class="experience-title-row">Innovation & Technology Intern @ Town of Mooresville, NC <span class="experience-date">May 2024 - Aug. 2025</span></div><i>Worked on GIS, IT helpdesk, robotics, governance policies, etc. for my Town.</i></div> </li>
-            <li> <div><div class="experience-title-row">Researcher & Lead Programmer @ UNC Wilmington's COAST Lab <span class="experience-date">June 2023 - Dec. 2024</span></div><i>Research in embedded systems and coastal engineering.</i></div> </li> 
-            <li> <div><div class="experience-title-row">Alumni Leadership Council Board Member @ Conrad Challenge <span class="experience-date">Dec. 2024 - Present</span></div><i>Hosting webinars, outreach, and mentorship for 5,000+ young entrepreneurs.</i></div> </li> 
-            <li> <div><div class="experience-title-row">Captain & Lead Programmer @ FUSE Robotics <span class="experience-date">Aug. 2021 - June 2025</span></div><i>Led NC's largest all-girls FTC robotics team in both engineering and outreach.</i></div> </li>
-            <li> <div><div class="experience-title-row">Founder & Executive Director @ Hacktivism <span class="experience-date">June 2024</span></div><i>Hosted an international student hackathon with 120+ particpants from 17+ countries.</i></div> </li>
-            <li> <div><div class="experience-title-row">Certified Instructor @ Mathnasium <span class="experience-date">Mar. 2024 - June 2025</span></div><i>Taught K-12 students of all backgrounds math in personalized, approachable methods.</i></div> </li>
-            <li> <div><div class="experience-title-row">QA Intern @ Skill Struck <span class="experience-date">Jan. 2023 - June 2023</span></div><i>Conducted quality assurance tests on Python and Robotics courses serving 300,000+ students.</i></div> </li>
-            <li> <div><div class="experience-title-row">Founder of Girls Who Code @ Mooresville Public Library <span class="experience-date">Jan. 2023 - May 2025</span></div><i>Taught 120+ students robotics, Python, game development, intro to AI, etc.</i></div> </li>
-          </ul>
-        </section>
-
-
-        <!---------------------------------------------- PROJECTS ----------------------------------------------->
-        <section id="projects">
-          <h1>Projects</h1>
-          <p class="lede">A couple of my favorite projects that I've been working on :)</p>
-
-          <section class="projects-grid">
-
-
-          <!---------------------------------- Clarity Coach -------------------------------->
-          <div class="card project-card project-tom">
-            <div class="project-header">
-              <div class="project-title-row">
-                <div>
-                  <h3>Clarity Coach</h3>
-                  <div class="meta">An interactive, AI-driven speaking platform that empowers non-native English speakers to gain confidence and fluency in the nuances of English language and culture.</div>
-                  <div class="project-date">February 2026</div>
-                </div>
-                <button class="dropdown-btn" aria-label="Toggle details">▼</button>
-              </div>
-              <div class="project-links">
-                <a href="https://devpost.com/software/clarity-coach-1oxkvl" class="link-btn" title="Devpost"><img src="assets/logos/devpost-logo.png" alt="Devpost" /></a>
-                <a href="https://github.com/SamhitaK10/clarity-coach" class="link-btn" title="GitHub"><img src="assets/logos/github-logo.png" alt="GitHub" /></a>
-              </div>
-            </div>
-            <div class="project-content">
-              <ul>
-                <li><b><i>Inspiration:</i></b> Nearly 1 in 5 U.S. residents grew up speaking a language other than English at home, yet most language platforms focus on vocabulary and grammar rather than real-world speaking confidence. Many non-native speakers struggle not with knowledge, but with delivery, cultural nuance, and self-assurance. Clarity Coach bridges this gap by offering an interactive, AI-driven platform that simulates authentic speaking scenarios and provides personalized, multimodal feedback.</li>
-                <li>Built as a full-stack AI application using <b>FastAPI, OpenCV, MediaPipe, and Modal</b> for real-time video and audio processing, with <b>OpenAI and Anthropic APIs</b> powering transcript evaluation and conversational coaching.</li>
-                <li>Implements in-browser recording via the <b>MediaRecorder API</b> and <b>WebRTC</b>, enabling seamless live speaking sessions with structured, iterative AI feedback.</li>
-                <li>Developed at <b>TreeHacks 2026</b>; currently expanding into browser extensions and interactive AI avatar simulations for more immersive, real-world speaking practice.</li>
-              </ul>
-            </div>
-          </div>
-
-          <!---------------------------------- GenesisXR -------------------------------->
-          <div class="card project-card project-genesisxr">
-            <div class="project-header">
-              <div class="project-title-row">
-                <div>
-                  <h3>GenesisXR</h3>
-                  <div class="meta">An extended reality ed-tech platform that de-abstracts the world through gamified 3D interactions.</div>
-                  <div class="project-date">Nov. 2025 - Present</div>
-                </div>
-                <button class="dropdown-btn" aria-label="Toggle details">▼</button>
-              </div>
-              <div class="project-links">
-                <a href="https://github.com/j8swang/GenesisXRR" class="link-btn" title="GitHub"><img src="assets/logos/github-logo.png" alt="GitHub" /></a>
-                <a href="https://www.youtube.com/watch?v=t7OT4RVBSPo" class="link-btn" title="YouTube"><img src="assets/logos/youtube-logo.png" alt="YouTube" /></a>
-                <a href="https://indugadiraju.github.io/genesisXR/" class="link-btn" title="Website"><img src="assets/logos/website-logo.png" alt="Website" /></a>
-                <a href="https://devpost.com/software/tandem-mxeljt" class="link-btn" title="Devpost"><img src="assets/logos/devpost-logo.png" alt="Devpost" /></a>
-              </div>
-            </div>
-            <div class="project-content">
-              <ul>
-                <li><b> <i> Inspiration: </i> </b>Much of modern school curricula relies on implicit abstractions that hinder students' abilities to fully grasp the underlying "how"s and "why"s of core concepts. This often leads to fundamental knowledge gaps and cascades of assumptions rather than empirically grounded understanding. GenesisXR addresses this by offering a gamified, approachable platform where students can explore, question, and build robust foundations of knowledge about the world around them.</li>
-                <li>Built on Apple Vision Pro using the <b> WebSpatial API </b> (HTML, CSS, and JavaScript).</li>
-                <li>Selected as an ambassador for <b> ByteDance and Pico </b> after <b> Stanford's Immerse the Bay Hackathon 2025. </b> </li>
-                <li>Currently working to publish GenesisXR in the Apple App Store.</li>
-              </ul>
-            </div>
-          </div>
-
-          <!---------------------------------- MAST -------------------------------->
-          <div class="card project-card project-mast">
-            <div class="project-header">
-              <div class="project-title-row">
-                <div>
-                  <h3>MAST (Modular Aquatic Sensing Technology)</h3>
-                  <div class="meta">A low-cost, modular Lagrangian drifter and bathymetric sensor for automated coastal monitoring. Lead Programmer of Research Group @ UNC Wilmington's COAST Lab.</div>
-                  <div class="project-date">June 2023 - Dec. 2024</div>
-                </div>
-                <button class="dropdown-btn" aria-label="Toggle details">▼</button>
-              </div>
-              <div class="project-links">
-                <a href="https://github.com/SUPScientist/smart-coasts-bathy-mapping" class="link-btn" title="GitHub"><img src="assets/logos/github-logo.png" alt="GitHub" /></a>
-                <a href="https://docs.google.com/presentation/d/1ZeNJlAOUubDj2DJRfHWvu1Uv4ztzHvZNpq92zAamYmI/present?slide=id.g2c4202797d2_0_88" class="link-btn" title="Poster"><img src="assets/logos/poster-logo.png" alt="Poster" /></a>
-              </div>
-            </div>
-            <div class="project-content">
-              <ul>
-                <li><b><i>Inspiration:</i></b> There is a massive deficit of bathymetric (underwater topographic) data alongside coastal regions, especially along North Carolina's >300-mile wide coast. Bathymetric patterns provide critical indicators of rip currents, coastal flooding, long-term monitoring of man-made coastal structures, and other coastal hazards. Current industry solutions cost thousands of dollars and offer limited spatial coverage. MAST was developed with the goal of creating an open-source, low-cost apparatus to expand bathymetric data coverage for environmental monitoring and to encourage citizen science.</li>
-                <li>Assembled the <b>electronic hardware</b> (microcontroller, ultrasonic distance sensor, accelerometer, temperature sensor, data logger, etc.); programmed the <b>firmware (Particle Workbench)</b> to acquire the data and <b>software (Python)</b> to interpret it; and strategically designed the modular, watertight <b>sensor housing</b> using easy-to-find materials like PVC, empty gelato containers, and resin.</li>
-                <li>Collected extensive data through numerous field tests at NC beaches.</li>
-                <li>Achieved <b>93% cost reduction</b> compared to commercial sensors while delivering results with <b>98% accuracy</b>.</li>
-                <li>Presented at the State of NC Undergraduate Research and Creativity Symposium, NC Science and Engineering Fair, UNC Wilmington, and the NCVPS Culture Cafe.</li>
-              </ul>
-              <div class="model-container">
-                <model-viewer
-                  src="assets/mast-pics/mast.glb"
-                  alt="3D model"
-                  auto-rotate
-                  camera-controls
-                  shadow-intensity="1"
-                  style="width: 100%; height: 100%;">
-                </model-viewer>
-              </div>
-              <div class="carousel-container carousel-compact">
-                <div class="carousel-wrapper">
-                  <div class="carousel-slides">
-                    <div class="carousel-slide active">
-                      <img src="assets/mast-pics/mast1.png" />
-                    </div>
-                    <div class="carousel-slide">
-                      <img src="assets/mast-pics/mast2.png"/>
-                    </div>
-                    <div class="carousel-slide">
-                      <img src="assets/mast-pics/mast3.png" />
-                    </div>
-                  </div>
-                  <button class="carousel-btn carousel-prev" aria-label="Previous">‹</button>
-                  <button class="carousel-btn carousel-next" aria-label="Next">›</button>
-                </div>
-                <div class="carousel-dots">
-                  <button class="carousel-dot active" aria-label="Go to slide 1"></button>
-                  <button class="carousel-dot" aria-label="Go to slide 2"></button>
-                  <button class="carousel-dot" aria-label="Go to slide 3"></button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!---------------------------------- UV Shield -------------------------------->
-          <div class="card project-card">
-            <div class="project-header">
-              <div class="project-title-row">
-                <div>
-                  <h3>UV Shield</h3>
-                  <div class="meta">A smart fabric that tracks and prevents UV exposure from within the home using novel carbon nanotube and reverse-engineered Geiger counter technology.</div>
-                  <div class="project-date">Nov. 2022 - Apr. 2023</div>
-                </div>
-                <button class="dropdown-btn" aria-label="Toggle details">▼</button>
-              </div>
-              <div class="project-links">
-                <a href="https://www.iredellfreenews.com/news-features/2023/south-iredell-high-team-qualifies-for-innovation-summit-in-houston/" class="link-btn" title="Article"><img src="assets/logos/article-logo.png" alt="Article" /></a>
-                <a href="https://docs.google.com/presentation/d/1Cp3Gxi-j-zhoC4b_8CaXaSIqH7oDdsxhX6W0BHTem4A/present?slide=id.p" class="link-btn" title="Poster"><img src="assets/logos/poster-logo.png" alt="Poster" /></a>
-              </div>
-            </div>
-            <div class="project-content">
-              <ul>
-                <li><b><i>Inspiration:</i></b> As skin cancer rates continue to rise, UV radiation remains the leading cause of over 90% of cases. While often associated with outdoor exposure, clear glass windows can transmit up to 75% of UVA radiation indoors. UV Shield addresses this overlooked risk by tracking and reducing indoor UV exposure, with applications extending beyond the home to medical, industrial, and other high-exposure environments. </li>
-                <li>As <b>co-founder</b>, co-designed the product from ideation through prototyping and validation. Developed the business and fundraising strategy, patent application, CAD prototype, and company branding and marketing materials. </li>
-                <li>Selected as one of 20 out of 950 teams as a <b>Conrad Challenge Finalist</b>, earning a top-5 score in the Health & Nutrition category, globally. </li>
-                <li>Pitched to industry professionals @ the <b>NASA Space Center Houston.</b> </li>
-                <li>Participated in Georgia Tech's Female Founders Accelerator as the only high school team in the cohort. </li>
-                <li>Currently serve on the <b>Conrad Challenge Alumni Leadership Council</b>, helping run the program for future young entrepreneurs. </li>
-              </ul>
-              <div class="carousel-container">
-                <div class="carousel-wrapper">
-                  <div class="carousel-slides">
-                    <div class="carousel-slide active">
-                      <img src="assets/uv-pics/uv1.png" />
-                    </div>
-                    <div class="carousel-slide">
-                      <img src="assets/uv-pics/uv2.png" />
-                    </div>
-                    <div class="carousel-slide">
-                      <img src="assets/uv-pics/uv3.png" />
-                    </div>
-                  </div>
-                  <button class="carousel-btn carousel-prev" aria-label="Previous">‹</button>
-                  <button class="carousel-btn carousel-next" aria-label="Next">›</button>
-                </div>
-                <div class="carousel-dots">
-                  <button class="carousel-dot active" aria-label="Go to slide 1"></button>
-                  <button class="carousel-dot" aria-label="Go to slide 2"></button>
-                  <button class="carousel-dot" aria-label="Go to slide 3"></button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!---------------------------------- FUSE -------------------------------->
-          <div class="card project-card project-fuse">
-            <div class="project-header">
-              <div class="project-title-row">
-                <div>
-                  <h3>FUSE Robotics</h3>
-                  <div class="meta">Built a bunch of cool robots while leading NC's largest all-girls FIRST Tech Challenge robotics team as Captain and Programming Lead.</div>
-                  <div class="project-date">Aug. 2021 - June 2025</div>
-                </div>
-                <button class="dropdown-btn" aria-label="Toggle details">▼</button>
-              </div>
-              <div class="project-links">
-                <a href="https://drive.google.com/file/d/1m_v6tI13CMrVD3rZdWfxlE460l2VGU-7/view?usp=sharing" class="link-btn" title="YouTube"><img src="assets/logos/youtube-logo.png" alt="YouTube" /></a>
-                <a href="https://statesville.com/news/local/article_3a2b709e-b6d0-11ee-982c-93d61d63fce1.html" class="link-btn" title="Article"><img src="assets/logos/article-logo.png" alt="Article" /></a>
-              </div>
-            </div>
-            <div class="project-content">
-              <p>This was one of the most rewarding teams I've worked with. Here are some photos of our robots, team, and build processes throughout the years :) </p>
-              <div class="carousel-container">
-                <div class="carousel-wrapper">
-                  <div class="carousel-slides">
-                    <div class="carousel-slide active">
-                      <img src="assets/fuse-pics/fuse1.png" alt="FUSE Robotics photo 1" />
-                    </div>
-                    <div class="carousel-slide">
-                      <img src="assets/fuse-pics/fuse2.png" alt="FUSE Robotics photo 2" />
-                    </div>
-                    <div class="carousel-slide">
-                      <img src="assets/fuse-pics/fuse3.png" alt="FUSE Robotics photo 3" />
-                    </div>
-                    <div class="carousel-slide">
-                      <img src="assets/fuse-pics/fuse5.png" alt="FUSE Robotics photo 4" />
-                    </div>
-                    <div class="carousel-slide">
-                      <img src="assets/fuse-pics/fuse6.png" alt="FUSE Robotics photo 5" />
-                    </div>
-                    <div class="carousel-slide">
-                      <img src="assets/fuse-pics/fuse7.png" alt="FUSE Robotics photo 6" />
-                    </div>
-                  </div>
-                  <button class="carousel-btn carousel-prev" aria-label="Previous">‹</button>
-                  <button class="carousel-btn carousel-next" aria-label="Next">›</button>
-                </div>
-                <div class="carousel-dots">
-                  <button class="carousel-dot active" aria-label="Go to slide 1"></button>
-                  <button class="carousel-dot" aria-label="Go to slide 2"></button>
-                  <button class="carousel-dot" aria-label="Go to slide 3"></button>
-                  <button class="carousel-dot" aria-label="Go to slide 4"></button>
-                  <button class="carousel-dot" aria-label="Go to slide 5"></button>
-                  <button class="carousel-dot" aria-label="Go to slide 6"></button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!---------------------------------- Hacktivism -------------------------------->
-          <div class="card project-card">
-            <div class="project-header">
-              <div class="project-title-row">
-                <div>
-                  <h3>Hacktivism</h3>
-                  <div class="meta">Founded and hosted an international student hackathon focused on building tech for social good (120+ participants from 17+ countries).</div>
-                  <div class="project-date">June 2024</div>
-                </div>
-                <button class="dropdown-btn" aria-label="Toggle details">▼</button>
-              </div>
-              <div class="project-links">
-                <a href="https://hacktivism.devpost.com/" class="link-btn" title="Devpost"><img src="assets/logos/devpost-logo.png" alt="Devpost" /></a>
-              </div>
-            </div>
-            <div class="project-content">
-              <ul>
-                <li>Founded and directed an <b>international student hackathon</b> encouraging teens to leverage tech for a social cause in their local communities.</li>
-                <li>Coordinated logistics, sponsorships, and global outreach; led six <b>technical workshops</b> alongside a team of 12 student directors. </li>
-              </ul>
-            </div>
-          </div>
-
-          <!---------------------------------- PolicyPro -------------------------------->
-          <div class="card project-card">
-            <div class="project-header">
-              <div class="project-title-row">
-                <div>
-                  <h3>PolicyPro</h3>
-                  <div class="meta">An iOS app that summarizes lengthy privacy policies to mitigate exposure to malicious security breaches.</div>
-                  <div class="project-date">Nov. 2023 - Jan. 2024</div>
-                </div>
-                <button class="dropdown-btn" aria-label="Toggle details">▼</button>
-              </div>
-              <div class="project-links">
-                <a href="https://www.congressionalappchallenge.us/23-nc12/" class="link-btn" title="Article"><img src="assets/logos/article-logo.png" alt="Article" /></a>
-              </div>
-            </div>
-            <div class="project-content">
-              <ul>
-                <li><b><i>Inspiration:</i></b> Each year, millions of data breaches expose vast amounts of personal data. Privacy policies and terms-and-conditions statements often disclose data collection and sharing practices; however, most users skim or skip these lengthy, fine-print documents. To address this gap, PolicyPro summarizes policies to clearly outline what users are agreeing to and highlight potential risks, red flags, or suspicious practices. </li>
-                <li>Built using <b>Swift and Apple's iOS development frameworks.</b></li>
-                <li>Winner of <b>NC Representative Alma Adams' Congressional App Challenge (2023).</b> </li>
-              </ul>
-            </div>
-          </div>
-
-          <!---------------------------------- TimeWise -------------------------------->
-          <div class="card project-card">
-            <div class="project-header">
-              <div class="project-title-row">
-                <div>
-                  <h3>TimeWise</h3>
-                  <div class="meta">An Android app that serves as a hub for all things productivity to help students improve time management.</div>
-                  <div class="project-date">Jan. 2023 - May 2023</div>
-                </div>
-                <button class="dropdown-btn" aria-label="Toggle details">▼</button>
-              </div>
-              <div class="project-links">
-                <a href="https://devpost.com/software/timewise-82y90w" class="link-btn" title="Devpost"><img src="assets/logos/devpost-logo.png" alt="Devpost" /></a>
-                <a href="https://abc45.com/news/local/app-solutely-brilliant-north-carolina-students-shine-in-state-wide-app-development-competition" class="link-btn" title="Article"><img src="assets/logos/article-logo.png" alt="Article" /></a>
-                <a href="https://governor.nc.gov/news/press-releases/2023/07/18/north-carolina-high-school-students-win-ready-set-app-development-competition" class="link-btn" title="Article"><img src="assets/logos/article-logo.png" alt="Article" /></a>
-                <a href="https://drive.google.com/file/d/1ewU3xvfapQKi6PibBA5-GbrRt0uRnHQ-/view?usp=sharing" class="link-btn" title="YouTube"><img src="assets/logos/youtube-logo.png" alt="YouTube" /></a>
-              </div>
-            </div>
-            <div class="project-content">
-              <ul>
-                <li><b><i>Inspiration:</i></b> Personal experiences juggling academics, jobs, extracurricular activities, and other responsibilities highlighted the importance of strong time management skills. TimeWise aims to tackle the root causes of poor time management and serves as an HQ for your productivity. </li>
-                <li>Built in <b>Android Studio</b> using <b>Java, Google Firebase, and SQLite.</b> </li>
-                <li>Pitched at Lenovo's HQ in Raleigh, NC and won <b>1st Place @ the NCBCE Lenovo Ready, Set, App Mobile App Competition (2023).</b> </li>
-              </ul>
-            </div>
-          </div>
-
-          </section>
-        </section>
-
-        <!---------------------------------------------- WRITING ----------------------------------------------->
-        <section id="writing">
-          <h1>Writing</h1>
-          <p class="lede" style="text-align: center;"> Coming soon! </p>
-        </section>
-
       </main>
-
     </div>
+
+    <!---------------------------------------------- REACH ME ----------------------------------------------->
+    <footer class="home-footer">
+      <h2>Reach Me!</h2>
+      <div class="pill-row">
+        <a class="pill" href="mailto:indugadi@stanford.edu" title="Email"
+          ><img src="assets/logos/email-logo.png" alt="Email" /><span
+            >indugadi [at] stanford [dot] edu</span
+          ></a
+        >
+        <a
+          class="pill"
+          href="https://www.linkedin.com/in/indugadiraju/"
+          title="LinkedIn"
+          ><img src="assets/logos/linkedin-logo.png" alt="LinkedIn" /><span
+            >LinkedIn</span
+          ></a
+        >
+        <a class="pill" href="https://github.com/indugadiraju" title="GitHub"
+          ><img src="assets/logos/github-logo.png" alt="GitHub" /><span
+            >GitHub</span
+          ></a
+        >
+        <a
+          class="pill"
+          href="https://indugadiraju.substack.com/"
+          title="Substack"
+          ><img src="assets/logos/substack-logo.png" alt="Substack" /><span
+            >Substack</span
+          ></a
+        >
+        <a class="pill" href="https://x.com/indugadiraju" title="X"
+          ><img src="assets/logos/x-logo.png" alt="X" /><span>X</span></a
+        >
+      </div>
+    </footer>
+    <footer class="simple-footer">
+      <p>© 2026 Indu Gadiraju</p>
+    </footer>
   </body>
 </html>

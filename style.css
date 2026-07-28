@@ -1,4 +1,3 @@
-
 /* Minimal, white-first layout */
 html {
   scroll-behavior: smooth;
@@ -21,12 +20,21 @@ html {
 
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, sans-serif;
+  padding: 0;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
   background: #ffffff;
+  background-image: url("/assets/sky.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   color: var(--text);
   line-height: 1.7;
+  padding-top: 80px;
 }
-
 
 a {
   color: inherit;
@@ -50,20 +58,34 @@ a:not(.pill):not(.link-btn):not(nav a) {
 .page {
   max-width: 800px;
   margin: 0 auto;
-  padding: 48px 16px 72px;
+  padding: 48px 16px 0;
 }
 
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  margin-bottom: 32px;
+  background: #013b70;
+  padding: 20px 48px;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .brand {
   font-weight: 700;
   letter-spacing: 0.02em;
+  color: #ffffff;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1;
+  font-family: "Bowlby One SC", sans-serif;
 }
 
 .brand img {
@@ -79,16 +101,18 @@ nav {
 }
 
 nav a {
-  padding: 6px 8px;
+  padding: 8px 16px;
   border-radius: 8px;
   transition: background-color 0.15s ease;
-  font-size: 14px;
+  font-size: 15px;
   white-space: nowrap;
+  color: #ffffff;
+  font-weight: 500;
 }
 
 nav a:hover,
 nav a[aria-current="page"] {
-  background: #eddac1;
+  background: rgba(255, 255, 255, 0.2);
 }
 
 h1 {
@@ -97,10 +121,89 @@ h1 {
   letter-spacing: -0.02em;
   color: #013b70;
   text-align: center;
+  font-family: "Bowlby One SC", sans-serif;
+  font-weight: 400;
 }
 
 section#home h1 {
   font-size: clamp(48px, 7vw, 64px);
+  text-align: center;
+  margin-bottom: 24px;
+  display: inline-block;
+  font-family: "Bowlby One SC", sans-serif;
+  font-weight: 400;
+}
+
+section#home {
+  display: flex;
+  flex-direction: column;
+}
+
+.home-content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.headshot-container {
+  position: relative;
+  flex-shrink: 0;
+  margin-top: 12px;
+}
+
+.headshot {
+  width: 280px;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  border: 20px solid #013b70;
+}
+
+.orbit-circle {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background: #ff8c00;
+  border-radius: 50%;
+  animation: orbitBorder 6s linear infinite;
+}
+
+@keyframes orbitBorder {
+  0% {
+    top: 4px;
+    left: 4px;
+  }
+  25% {
+    top: 4px;
+    left: calc(100% - 16px);
+  }
+  50% {
+    top: calc(100% - 16px);
+    left: calc(100% - 16px);
+  }
+  75% {
+    top: calc(100% - 16px);
+    left: 4px;
+  }
+  100% {
+    top: 4px;
+    left: 4px;
+  }
+}
+
+.home-paragraphs {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+@media (max-width: 640px) {
+  .home-content {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 h2 {
@@ -109,6 +212,8 @@ h2 {
   letter-spacing: -0.02em;
   color: #013b70;
   text-align: center;
+  font-family: "Bowlby One SC", sans-serif;
+  font-weight: 400;
 }
 
 p {
@@ -251,11 +356,11 @@ section#experience {
   .projects-grid {
     grid-template-columns: 1fr;
   }
-  
+
   nav {
     gap: 4px;
   }
-  
+
   nav a {
     padding: 6px 6px;
     font-size: 12px;
@@ -278,6 +383,8 @@ section#experience {
   margin: 0 0 6px;
   font-size: 18px;
   color: var(--text);
+  font-family: "Bowlby One SC", sans-serif;
+  font-weight: 400;
 }
 
 .project-card h3 {
@@ -309,7 +416,9 @@ section#experience {
   color: var(--muted);
   cursor: pointer;
   padding: 4px 8px;
-  transition: transform 0.2s ease, color 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
   flex-shrink: 0;
   line-height: 1;
 }
@@ -339,7 +448,9 @@ section#experience {
   background: #fff;
   color: var(--muted);
   text-decoration: none;
-  transition: background-color 0.15s ease, border-color 0.15s ease;
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease;
   padding: 6px;
 }
 
@@ -365,7 +476,9 @@ section#experience {
 .project-content {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease, margin-top 0.3s ease;
+  transition:
+    max-height 0.3s ease,
+    margin-top 0.3s ease;
   margin-top: 0;
 }
 
@@ -435,7 +548,9 @@ section#experience {
   font-size: 24px;
   color: var(--text);
   cursor: pointer;
-  transition: background-color 0.2s ease, border-color 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
   z-index: 10;
 }
 
@@ -512,6 +627,45 @@ section#experience {
   list-style: none;
 }
 
+.home-footer {
+  background: #87ceeb;
+  padding: 48px;
+  margin-top: 48px;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.home-footer h2 {
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+.copyright {
+  margin-top: 40px;
+  margin-bottom: 0;
+  font-size: 14px;
+  color: black;
+  opacity: 0.7;
+}
+
+.simple-footer {
+  background: #b6d5e1;
+  padding: 12px 24px;
+  text-align: center;
+  margin-top: 48px;
+}
+
+.home-footer + .simple-footer {
+  margin-top: 0;
+}
+
+.simple-footer p {
+  margin: 0;
+  font-size: 12px;
+  color: black;
+  opacity: 0.7;
+}
+
 .pill-row {
   display: flex;
   gap: 8px;
@@ -532,11 +686,12 @@ section.stack {
 }
 
 .pill {
-  border: 1px solid var(--border);
+  border: none;
   border-radius: 999px;
   padding: 4px 10px;
   font-size: 13px;
-  color: var(--muted);
+  color: #ffffff;
+  background: #013b70;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -556,8 +711,8 @@ section.stack {
 }
 
 .pill:hover {
-  background: #eddac1;
-  border-color: var(--text);
+  background: #025a9c;
+  opacity: 0.9;
 }
 
 .footer {
@@ -574,4 +729,3 @@ footer {
   font-size: 14px;
   color: var(--muted);
 }
-
