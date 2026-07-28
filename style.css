@@ -158,6 +158,7 @@ section#home {
   object-fit: cover;
   display: block;
   border: 20px solid #013b70;
+  border-radius: 8px;
 }
 
 .orbit-circle {
@@ -627,10 +628,496 @@ section#experience {
   list-style: none;
 }
 
+.marquee-section {
+  background: #000000;
+  padding: 12px 24px;
+  overflow: hidden;
+  margin-top: 16px;
+  position: relative;
+  min-height: 48px;
+}
+
+.terminal-content {
+  color: #00ff00;
+  font-size: 14px;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+}
+
+#term1 {
+  animation: showTerminal 18s infinite;
+}
+
+#term2 {
+  animation: showTerminal 18s 6s infinite;
+}
+
+#term3 {
+  animation: showTerminal 18s 12s infinite;
+}
+
+#term1 .terminal-prompt {
+  animation: promptAnim1 18s infinite;
+}
+
+#term1 .terminal-command {
+  animation: cmdAnim1 18s infinite;
+}
+
+#term1 .terminal-response {
+  animation: respAnim1 18s infinite;
+}
+
+#term2 .terminal-prompt {
+  animation: promptAnim2 18s infinite;
+}
+
+#term2 .terminal-command {
+  animation: cmdAnim2 18s infinite;
+}
+
+#term2 .terminal-response {
+  animation: respAnim2 18s infinite;
+}
+
+#term3 .terminal-prompt {
+  animation: promptAnim3 18s infinite;
+}
+
+#term3 .terminal-command {
+  animation: cmdAnim3 18s infinite;
+}
+
+#term3 .terminal-response {
+  animation: respAnim3 18s infinite;
+}
+
+.terminal-prompt {
+  color: #00ff00;
+  opacity: 0;
+}
+
+@keyframes promptAnim1 {
+  0%,
+  0.9% {
+    opacity: 0;
+  }
+  1%,
+  31% {
+    opacity: 1;
+  }
+  31.1%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes promptAnim2 {
+  0%,
+  33.33% {
+    opacity: 0;
+  }
+  33.34%,
+  64% {
+    opacity: 1;
+  }
+  64.1%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes promptAnim3 {
+  0%,
+  66.67% {
+    opacity: 0;
+  }
+  66.68%,
+  97% {
+    opacity: 1;
+  }
+  97.1%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.terminal-command {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #00ff00;
+  width: 0;
+}
+
+.terminal-response {
+  opacity: 0;
+  color: #00ff00;
+  margin-left: 24px;
+}
+
+@keyframes cmdAnim1 {
+  0%,
+  2.7% {
+    width: 0;
+    border-right-color: #00ff00;
+  }
+  2.8%,
+  5.5% {
+    width: 0;
+    border-right-color: transparent;
+  }
+  5.6%,
+  8.3% {
+    width: 0;
+    border-right-color: #00ff00;
+  }
+  8.4%,
+  11.1% {
+    width: 0;
+    border-right-color: transparent;
+  }
+  11.2%,
+  13.9% {
+    width: 0;
+    border-right-color: #00ff00;
+  }
+  14%,
+  16.6% {
+    width: 0;
+    border-right-color: transparent;
+  }
+  16.7% {
+    width: 0;
+    border-right-color: #00ff00;
+  }
+  17.3% {
+    width: 1ch;
+    border-right-color: #00ff00;
+  }
+  17.9% {
+    width: 2ch;
+    border-right-color: #00ff00;
+  }
+  18.5% {
+    width: 3ch;
+    border-right-color: #00ff00;
+  }
+  19.1% {
+    width: 4ch;
+    border-right-color: #00ff00;
+  }
+  19.7% {
+    width: 5ch;
+    border-right-color: #00ff00;
+  }
+  20.3% {
+    width: 6ch;
+    border-right-color: #00ff00;
+  }
+  20.9% {
+    width: 7ch;
+    border-right-color: #00ff00;
+  }
+  21.5% {
+    width: 8ch;
+    border-right-color: #00ff00;
+  }
+  22.1% {
+    width: 9ch;
+    border-right-color: #00ff00;
+  }
+  22.7% {
+    width: 10ch;
+    border-right-color: #00ff00;
+  }
+  23.3% {
+    width: 11ch;
+    border-right-color: #00ff00;
+  }
+  23.9% {
+    width: 12ch;
+    border-right-color: #00ff00;
+  }
+  24.5% {
+    width: 13ch;
+    border-right-color: #00ff00;
+  }
+  25.1%,
+  27.9% {
+    width: 14ch;
+    border-right-color: #00ff00;
+  }
+  28%,
+  31% {
+    width: 14ch;
+    border-right-color: transparent;
+  }
+  31.1%,
+  100% {
+    width: 0;
+    border-right-color: transparent;
+  }
+}
+
+@keyframes respAnim1 {
+  0%,
+  28% {
+    opacity: 0;
+  }
+  28.1%,
+  31% {
+    opacity: 1;
+  }
+  31.1%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes cmdAnim2 {
+  0%,
+  33.33% {
+    width: 0;
+    border-right-color: transparent;
+  }
+  33.34%,
+  36% {
+    width: 0;
+    border-right-color: #00ff00;
+  }
+  36.1%,
+  38.8% {
+    width: 0;
+    border-right-color: transparent;
+  }
+  38.9%,
+  41.6% {
+    width: 0;
+    border-right-color: #00ff00;
+  }
+  41.7%,
+  44.4% {
+    width: 0;
+    border-right-color: transparent;
+  }
+  44.5%,
+  47.2% {
+    width: 0;
+    border-right-color: #00ff00;
+  }
+  47.3% {
+    width: 0;
+    border-right-color: transparent;
+  }
+  49.5% {
+    width: 0;
+    border-right-color: #00ff00;
+  }
+  50.1% {
+    width: 1ch;
+    border-right-color: #00ff00;
+  }
+  50.7% {
+    width: 2ch;
+    border-right-color: #00ff00;
+  }
+  51.3% {
+    width: 3ch;
+    border-right-color: #00ff00;
+  }
+  51.9% {
+    width: 4ch;
+    border-right-color: #00ff00;
+  }
+  52.5% {
+    width: 5ch;
+    border-right-color: #00ff00;
+  }
+  53.1% {
+    width: 6ch;
+    border-right-color: #00ff00;
+  }
+  53.7%,
+  54.9% {
+    width: 7ch;
+    border-right-color: #00ff00;
+  }
+  55%,
+  64% {
+    width: 7ch;
+    border-right-color: transparent;
+  }
+  64.1%,
+  100% {
+    width: 0;
+    border-right-color: transparent;
+  }
+}
+
+@keyframes respAnim2 {
+  0%,
+  55% {
+    opacity: 0;
+  }
+  55.1%,
+  64% {
+    opacity: 1;
+  }
+  64.1%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes cmdAnim3 {
+  0%,
+  66.67% {
+    width: 0;
+    border-right-color: transparent;
+  }
+  66.68%,
+  69.4% {
+    width: 0;
+    border-right-color: #00ff00;
+  }
+  69.5%,
+  72.2% {
+    width: 0;
+    border-right-color: transparent;
+  }
+  72.3%,
+  75% {
+    width: 0;
+    border-right-color: #00ff00;
+  }
+  75.1%,
+  77.8% {
+    width: 0;
+    border-right-color: transparent;
+  }
+  77.9%,
+  80.5% {
+    width: 0;
+    border-right-color: #00ff00;
+  }
+  80.6% {
+    width: 0;
+    border-right-color: transparent;
+  }
+  82.8% {
+    width: 0;
+    border-right-color: #00ff00;
+  }
+  83.4% {
+    width: 1ch;
+    border-right-color: #00ff00;
+  }
+  84% {
+    width: 2ch;
+    border-right-color: #00ff00;
+  }
+  84.6%,
+  86.9% {
+    width: 3ch;
+    border-right-color: #00ff00;
+  }
+  87%,
+  97% {
+    width: 3ch;
+    border-right-color: transparent;
+  }
+  97.1%,
+  100% {
+    width: 0;
+    border-right-color: transparent;
+  }
+}
+
+@keyframes respAnim3 {
+  0%,
+  87% {
+    opacity: 0;
+  }
+  87.1%,
+  97% {
+    opacity: 1;
+  }
+  97.1%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes showCursor {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes showResponse {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes hideCursor {
+  to {
+    border-right-color: transparent;
+  }
+}
+
+@keyframes showTerminal {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  33.33% {
+    opacity: 1;
+    visibility: visible;
+  }
+  33.34% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes resetTyping {
+  to {
+    width: 0;
+    border-right-color: #00ff00;
+  }
+}
+
+@keyframes hideResponse {
+  to {
+    opacity: 0;
+  }
+}
+
 .home-footer {
   background: #87ceeb;
   padding: 48px;
-  margin-top: 48px;
+  margin-top: 0;
   margin-bottom: 0;
   text-align: center;
 }
