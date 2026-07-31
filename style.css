@@ -154,6 +154,7 @@ section#home {
 
 .headshot {
   width: 280px;
+  max-width: 100%;
   height: auto;
   object-fit: cover;
   display: block;
@@ -204,6 +205,35 @@ section#home {
   .home-content {
     flex-direction: column;
     align-items: center;
+  }
+
+  .headshot {
+    width: 200px;
+  }
+
+  header {
+    padding: 12px 16px;
+  }
+
+  .brand {
+    font-size: 15px;
+  }
+
+  .page {
+    padding: 40px 12px 0;
+  }
+
+  .home-footer {
+    padding: 32px 16px;
+  }
+
+  .experience-title-row {
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .previously-list li .experience-date {
+    text-align: left;
   }
 }
 
@@ -648,7 +678,9 @@ section#experience {
   justify-content: center;
   gap: 8px;
   position: absolute;
-  width: 100%;
+  left: 0;
+  right: 0;
+  padding: 0 24px;
 }
 
 .terminal-content.active {
@@ -684,9 +716,10 @@ section#experience {
 .terminal-response {
   opacity: 0;
   color: #00ff00;
-  margin-left: 24px;
+  margin-left: 16px;
   display: flex;
-  gap: 16px;
+  gap: 12px;
+  flex-wrap: wrap;
   transition: opacity 0.1s ease;
 }
 
@@ -715,6 +748,30 @@ section#experience {
   50%,
   100% {
     border-right-color: transparent;
+  }
+}
+
+@media (max-width: 640px) {
+  .marquee-section {
+    padding: 12px 12px;
+    min-height: 60px;
+  }
+
+  .terminal-content {
+    padding: 0 12px;
+    font-size: 12px;
+    gap: 6px;
+  }
+
+  .terminal-response {
+    margin-left: 10px;
+    gap: 8px;
+    font-size: 12px;
+  }
+
+  .terminal-link {
+    padding: 2px 4px;
+    font-size: 12px;
   }
 }
 
