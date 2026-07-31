@@ -137,4 +137,155 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     })();
   }
+
+  // Substack RSS feed
+  const substackGrid = document.getElementById("substack-articles");
+  if (substackGrid) {
+    const SUBSTACK_FEED = "https://indugadiraju.substack.com/feed";
+    const loadingEl = document.getElementById("substack-loading");
+    const errorEl = document.getElementById("substack-error");
+
+    fetch(SUBSTACK_FEED)
+      .then((res) => {
+        if (!res.ok) throw new Error("Feed fetch failed");
+        return res.text();
+      })
+      .then((xml) => {
+        const doc = new DOMParser().parseFromString(xml, "application/xml");
+        const items = doc.querySelectorAll("item");
+
+        if (items.length === 0) {
+          loadingEl.style.display = "none";
+          errorEl.style.display = "block";
+          return;
+        }
+
+        items.forEach((item) => {
+          const title = item.querySelector("title")?.textContent || "Untitled";
+          const link = item.querySelector("link")?.textContent || "#";
+          const pubDate = item.querySelector("pubDate")?.textContent;
+          const description =
+            item.querySelector("description")?.textContent || "";
+
+          // Strip HTML tags from description for a clean excerpt
+          const tmp = document.createElement("div");
+          tmp.innerHTML = description;
+          const excerpt = tmp.textContent.trim().slice(0, 200);
+
+          // Extract first image from description if available
+          const imgMatch = description.match(/<img[^>]+src=["']([^"']+)["']/);
+          const imgSrc = imgMatch ? imgMatch[1] : null;
+
+          const dateStr = pubDate
+            ? new Date(pubDate).toLocaleDateString("en-US", {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+              })
+            : "";
+
+          const card = document.createElement("a");
+          card.href = link;
+          card.target = "_blank";
+          card.rel = "noopener";
+          card.className = "substack-card card";
+
+          card.innerHTML =
+            (imgSrc
+              ? '<div class="substack-card-img"><img src="' +
+                imgSrc +
+                '" alt="" loading="lazy" /></div>'
+              : "") +
+            '<div class="substack-card-body">' +
+            "<h3>" +
+            title +
+            "</h3>" +
+            (dateStr ? '<p class="substack-date">' + dateStr + "</p>" : "") +
+            (excerpt
+              ? '<p class="substack-excerpt">' +
+                excerpt +
+                (excerpt.length >= 200 ? "&hellip;" : "") +
+                "</p>"
+              : "") +
+            "</div>";
+
+          substackGrid.appendChild(card);
+        });
+
+        loadingEl.style.display = "none";
+      })
+      .catch(() => {
+        loadingEl.style.display = "none";
+        errorEl.style.display = "block";
+      });
+  }
+
+  // Film-strip drag-to-scroll (supports multiple strips)
+  const filmstrips = document.querySelectorAll(".filmstrip-track");
+  const lightbox = document.getElementById("filmstrip-lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  const lightboxClose = document.getElementById("lightbox-close");
+
+  filmstrips.forEach((filmstrip) => {
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+    let hasDragged = false;
+
+    filmstrip.addEventListener("mousedown", (e) => {
+      isDown = true;
+      hasDragged = false;
+      filmstrip.classList.add("dragging");
+      startX = e.pageX - filmstrip.offsetLeft;
+      scrollLeft = filmstrip.scrollLeft;
+    });
+
+    filmstrip.addEventListener("mouseleave", () => {
+      isDown = false;
+      filmstrip.classList.remove("dragging");
+    });
+
+    filmstrip.addEventListener("mouseup", () => {
+      isDown = false;
+      filmstrip.classList.remove("dragging");
+    });
+
+    filmstrip.addEventListener("mousemove", (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - filmstrip.offsetLeft;
+      const walk = (x - startX) * 1.5;
+      if (Math.abs(walk) > 5) hasDragged = true;
+      filmstrip.scrollLeft = scrollLeft - walk;
+    });
+
+    if (lightbox) {
+      filmstrip.querySelectorAll(".frame-image").forEach((frame) => {
+        frame.addEventListener("click", () => {
+          if (hasDragged) return;
+          const src = frame.querySelector("img").src;
+          lightboxImg.src = src;
+          lightbox.classList.add("active");
+        });
+      });
+    }
+  });
+
+  if (lightbox) {
+    lightboxClose.addEventListener("click", () => {
+      lightbox.classList.remove("active");
+    });
+
+    lightbox.addEventListener("click", (e) => {
+      if (e.target === lightbox) {
+        lightbox.classList.remove("active");
+      }
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && lightbox.classList.contains("active")) {
+        lightbox.classList.remove("active");
+      }
+    });
+  }
 });

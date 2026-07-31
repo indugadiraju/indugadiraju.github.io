@@ -32,7 +32,35 @@
 
       <main class="stack">
         <h1>Writing</h1>
-        <p class="lede">Coming soon!</p>
+        <p class="lede" style="text-align: center">
+          Articles from my
+          <a
+            href="https://indugadiraju.substack.com/"
+            class="intro-link"
+            target="_blank"
+            rel="noopener"
+            >Substack</a
+          >.
+        </p>
+
+        <div id="substack-loading" class="substack-loading">
+          <span class="substack-spinner"></span> Loading articles&hellip;
+        </div>
+
+        <div id="substack-error" class="substack-error" style="display: none">
+          <p>
+            Couldn't load articles right now.
+            <a
+              href="https://indugadiraju.substack.com/"
+              class="intro-link"
+              target="_blank"
+              rel="noopener"
+              >Read on Substack &rarr;</a
+            >
+          </p>
+        </div>
+
+        <div id="substack-articles" class="substack-grid"></div>
       </main>
     </div>
     <footer class="simple-footer">
