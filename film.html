@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Film & Photo · Indu Gadiraju</title>
+    <meta
+      name="description"
+      content="Hobbyist photography by Indu Gadiraju — film-style photo galleries from Switzerland, Spain, and beyond."
+    />
     <link rel="icon" type="image/png" href="/assets/website_favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,6 +16,7 @@
       href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap"
       rel="stylesheet"
     />
+    <link rel="preload" href="/assets/sky.jpg" as="image" />
     <link rel="stylesheet" href="/style.css" />
     <script src="/script.js" defer></script>
   </head>
@@ -22,6 +27,11 @@
           <div>Indu</div>
           <div>Gadiraju</div>
         </div>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
         <nav>
           <a href="index.html">Home</a>
           <a href="projects.html">Projects</a>
@@ -32,7 +42,7 @@
 
       <main class="stack">
         <h1>Film & Photo</h1>
-        <p class="lede" style="text-align: center; margin-bottom: 48px">
+        <p class="lede text-center mb-48">
           A selection of my favorite hobbyist photography.
         </p>
       </main>
@@ -47,6 +57,7 @@
             <img
               src="assets/filmstrip1-switzerland/IMG_7691.JPG"
               alt="Switzerland 1"
+              loading="lazy"
             />
           </div>
           <span class="frame-number">01</span>
@@ -56,6 +67,7 @@
             <img
               src="assets/filmstrip1-switzerland/IMG_7697.jpg"
               alt="Switzerland 2"
+              loading="lazy"
             />
           </div>
           <span class="frame-number">02</span>
@@ -65,6 +77,7 @@
             <img
               src="assets/filmstrip1-switzerland/IMG_7761.JPG"
               alt="Switzerland 3"
+              loading="lazy"
             />
           </div>
           <span class="frame-number">03</span>
@@ -74,6 +87,7 @@
             <img
               src="assets/filmstrip1-switzerland/IMG_7775.JPG"
               alt="Switzerland 4"
+              loading="lazy"
             />
           </div>
           <span class="frame-number">04</span>
@@ -83,6 +97,7 @@
             <img
               src="assets/filmstrip1-switzerland/IMG_7788.JPG"
               alt="Switzerland 5"
+              loading="lazy"
             />
           </div>
           <span class="frame-number">05</span>
@@ -92,6 +107,7 @@
             <img
               src="assets/filmstrip1-switzerland/IMG_7874.JPG"
               alt="Switzerland 6"
+              loading="lazy"
             />
           </div>
           <span class="frame-number">06</span>
@@ -101,6 +117,7 @@
             <img
               src="assets/filmstrip1-switzerland/Unknown.jpeg"
               alt="Switzerland 7"
+              loading="lazy"
             />
           </div>
           <span class="frame-number">07</span>
@@ -110,6 +127,7 @@
             <img
               src="assets/filmstrip1-switzerland/Unknown-1.jpeg"
               alt="Switzerland 8"
+              loading="lazy"
             />
           </div>
           <span class="frame-number">08</span>
@@ -119,6 +137,7 @@
             <img
               src="assets/filmstrip1-switzerland/Unknown-2.jpeg"
               alt="Switzerland 9"
+              loading="lazy"
             />
           </div>
           <span class="frame-number">09</span>
@@ -128,6 +147,7 @@
             <img
               src="assets/filmstrip1-switzerland/Unknown-3.jpeg"
               alt="Switzerland 10"
+              loading="lazy"
             />
           </div>
           <span class="frame-number">10</span>
@@ -137,6 +157,7 @@
             <img
               src="assets/filmstrip1-switzerland/Unknown-4.jpeg"
               alt="Switzerland 11"
+              loading="lazy"
             />
           </div>
           <span class="frame-number">11</span>
@@ -150,49 +171,81 @@
       <div class="filmstrip-track" id="filmstrip2">
         <div class="filmstrip-frame">
           <div class="frame-image">
-            <img src="assets/filmstrip2-spain/IMG_7899.jpg" alt="Spain 1" />
+            <img
+              src="assets/filmstrip2-spain/IMG_7899.jpg"
+              alt="Spain 1"
+              loading="lazy"
+            />
           </div>
           <span class="frame-number">01</span>
         </div>
         <div class="filmstrip-frame">
           <div class="frame-image">
-            <img src="assets/filmstrip2-spain/IMG_7916.jpg" alt="Spain 2" />
+            <img
+              src="assets/filmstrip2-spain/IMG_7916.jpg"
+              alt="Spain 2"
+              loading="lazy"
+            />
           </div>
           <span class="frame-number">02</span>
         </div>
         <div class="filmstrip-frame">
           <div class="frame-image">
-            <img src="assets/filmstrip2-spain/IMG_7923.jpg" alt="Spain 3" />
+            <img
+              src="assets/filmstrip2-spain/IMG_7923.jpg"
+              alt="Spain 3"
+              loading="lazy"
+            />
           </div>
           <span class="frame-number">03</span>
         </div>
         <div class="filmstrip-frame">
           <div class="frame-image">
-            <img src="assets/filmstrip2-spain/IMG_7941.jpg" alt="Spain 4" />
+            <img
+              src="assets/filmstrip2-spain/IMG_7941.jpg"
+              alt="Spain 4"
+              loading="lazy"
+            />
           </div>
           <span class="frame-number">04</span>
         </div>
         <div class="filmstrip-frame">
           <div class="frame-image">
-            <img src="assets/filmstrip2-spain/IMG_7946.jpg" alt="Spain 5" />
+            <img
+              src="assets/filmstrip2-spain/IMG_7946.jpg"
+              alt="Spain 5"
+              loading="lazy"
+            />
           </div>
           <span class="frame-number">05</span>
         </div>
         <div class="filmstrip-frame">
           <div class="frame-image">
-            <img src="assets/filmstrip2-spain/IMG_8045.jpg" alt="Spain 6" />
+            <img
+              src="assets/filmstrip2-spain/IMG_8045.jpg"
+              alt="Spain 6"
+              loading="lazy"
+            />
           </div>
           <span class="frame-number">06</span>
         </div>
         <div class="filmstrip-frame">
           <div class="frame-image">
-            <img src="assets/filmstrip2-spain/IMG_8056.jpg" alt="Spain 7" />
+            <img
+              src="assets/filmstrip2-spain/IMG_8056.jpg"
+              alt="Spain 7"
+              loading="lazy"
+            />
           </div>
           <span class="frame-number">07</span>
         </div>
         <div class="filmstrip-frame">
           <div class="frame-image">
-            <img src="assets/filmstrip2-spain/IMG_8134.jpg" alt="Spain 8" />
+            <img
+              src="assets/filmstrip2-spain/IMG_8134.jpg"
+              alt="Spain 8"
+              loading="lazy"
+            />
           </div>
           <span class="frame-number">08</span>
         </div>

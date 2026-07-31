@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Projects · Indu Gadiraju</title>
+    <meta
+      name="description"
+      content="A selection of projects by Indu Gadiraju spanning applied AI, robotics, mobile apps, environmental sensing, and entrepreneurship."
+    />
     <link rel="icon" type="image/png" href="/assets/website_favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,6 +16,7 @@
       href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap"
       rel="stylesheet"
     />
+    <link rel="preload" href="/assets/sky.jpg" as="image" />
     <link rel="stylesheet" href="/style.css" />
     <script src="/script.js" defer></script>
     <script
@@ -26,6 +31,11 @@
           <div>Indu</div>
           <div>Gadiraju</div>
         </div>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
         <nav>
           <a href="index.html">Home</a>
           <a href="projects.html" aria-current="page">Projects</a>
@@ -36,25 +46,29 @@
 
       <main class="stack">
         <h1>Projects</h1>
-        <p class="lede" style="text-align: center">
+        <p class="lede text-center">
           A couple of my favorite projects that I've been working on :)
         </p>
 
-        <section class="projects-grid" style="margin-top: 32px">
+        <section class="projects-grid mt-32">
           <!---------------------------------- Sky Mountain Coffee App -------------------------------->
           <div class="card project-card">
             <div class="project-cover">
               <img
                 src="assets/skymountain.png"
                 alt="Sky Mountain Coffee cover"
+                loading="lazy"
               />
               <span class="project-year">2026</span>
             </div>
             <div class="project-header">
               <div class="project-title-row">
                 <div>
-                  <h3>Sky Mountain Coffee App </h3>
-                  <div class="meta">A dual-sided mobile ordering system for Sky Mountain Coffee's 4,000+ customers and employees.</div>
+                  <h3>Sky Mountain Coffee App</h3>
+                  <div class="meta">
+                    A dual-sided mobile ordering system for Sky Mountain
+                    Coffee's 4,000+ customers and employees.
+                  </div>
                 </div>
                 <button class="dropdown-btn" aria-label="Toggle details">
                   ▼
@@ -71,7 +85,11 @@
           <!---------------------------------- LEDress to Impress -------------------------------->
           <div class="card project-card">
             <div class="project-cover">
-              <img src="assets/leddress.jpeg" alt="LEDress to Impress cover" />
+              <img
+                src="assets/leddress.jpeg"
+                alt="LEDress to Impress cover"
+                loading="lazy"
+              />
               <span class="project-year">2026</span>
             </div>
             <div class="project-header">
@@ -95,7 +113,11 @@
           <!---------------------------------- Clarity Coach -------------------------------->
           <div class="card project-card">
             <div class="project-cover">
-              <img src="assets/claritycoach.png" alt="Clarity Coach cover" />
+              <img
+                src="assets/claritycoach.png"
+                alt="Clarity Coach cover"
+                loading="lazy"
+              />
               <span class="project-year">2026</span>
             </div>
             <div class="project-header">
@@ -119,7 +141,11 @@
           <!---------------------------------- GenesisXR -------------------------------->
           <div class="card project-card">
             <div class="project-cover">
-              <img src="assets/covers/genesisxr.png" alt="GenesisXR cover" />
+              <img
+                src="assets/covers/genesisxr.png"
+                alt="GenesisXR cover"
+                loading="lazy"
+              />
               <span class="project-year">2025</span>
             </div>
             <div class="project-header">
@@ -140,24 +166,32 @@
                   href="https://github.com/j8swang/GenesisXRR"
                   class="link-btn"
                   title="GitHub"
+                  target="_blank"
+                  rel="noopener"
                   ><img src="assets/logos/github-logo.png" alt="GitHub"
                 /></a>
                 <a
                   href="https://www.youtube.com/watch?v=t7OT4RVBSPo"
                   class="link-btn"
                   title="YouTube"
+                  target="_blank"
+                  rel="noopener"
                   ><img src="assets/logos/youtube-logo.png" alt="YouTube"
                 /></a>
                 <a
                   href="https://indugadiraju.github.io/genesisXR/"
                   class="link-btn"
                   title="Website"
+                  target="_blank"
+                  rel="noopener"
                   ><img src="assets/logos/website-logo.png" alt="Website"
                 /></a>
                 <a
                   href="https://devpost.com/software/tandem-mxeljt"
                   class="link-btn"
                   title="Devpost"
+                  target="_blank"
+                  rel="noopener"
                   ><img src="assets/logos/devpost-logo.png" alt="Devpost"
                 /></a>
               </div>
@@ -197,7 +231,11 @@
           <!---------------------------------- TOM Tech -------------------------------->
           <div class="card project-card">
             <div class="project-cover">
-              <img src="assets/tom-pics/tom1.png" alt="TOM Tech cover" />
+              <img
+                src="assets/tom-pics/tom1.png"
+                alt="TOM Tech cover"
+                loading="lazy"
+              />
               <span class="project-year">2024-2025</span>
             </div>
             <div class="project-header">
@@ -217,6 +255,8 @@
                   href="https://www.linkedin.com/posts/indugadiraju_meet-tom-techthe-town-of-mooresville-ncs-activity-7326048685992124416-CSE4?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD7iRnEBEz3nf9b7mq2MILoPh0tstyOSY6E"
                   class="link-btn"
                   title="LinkedIn"
+                  target="_blank"
+                  rel="noopener"
                   ><img src="assets/logos/linkedin-logo.png" alt="LinkedIn"
                 /></a>
               </div>
@@ -250,7 +290,11 @@
           <!---------------------------------- FUSE -------------------------------->
           <div class="card project-card">
             <div class="project-cover">
-              <img src="assets/fuse-pics/fuse1.png" alt="FUSE Robotics cover" />
+              <img
+                src="assets/fuse-pics/fuse1.png"
+                alt="FUSE Robotics cover"
+                loading="lazy"
+              />
               <span class="project-year">2021-2025</span>
             </div>
             <div class="project-header">
@@ -280,7 +324,11 @@
           <!---------------------------------- MAST -------------------------------->
           <div class="card project-card">
             <div class="project-cover">
-              <img src="assets/mast-pics/mast1.png" alt="MAST cover" />
+              <img
+                src="assets/mast-pics/mast1.png"
+                alt="MAST cover"
+                loading="lazy"
+              />
               <span class="project-year">2023-2024</span>
             </div>
             <div class="project-header">
@@ -301,12 +349,16 @@
                   href="https://github.com/SUPScientist/smart-coasts-bathy-mapping"
                   class="link-btn"
                   title="GitHub"
+                  target="_blank"
+                  rel="noopener"
                   ><img src="assets/logos/github-logo.png" alt="GitHub"
                 /></a>
                 <a
                   href="https://docs.google.com/presentation/d/1ZeNJlAOUubDj2DJRfHWvu1Uv4ztzHvZNpq92zAamYmI/present?slide=id.g2c4202797d2_0_88"
                   class="link-btn"
                   title="Poster"
+                  target="_blank"
+                  rel="noopener"
                   ><img src="assets/logos/poster-logo.png" alt="Poster"
                 /></a>
               </div>
@@ -369,7 +421,11 @@
           <!---------------------------------- PolicyPro -------------------------------->
           <div class="card project-card">
             <div class="project-cover">
-              <img src="assets/policypro.png" alt="PolicyPro cover" />
+              <img
+                src="assets/policypro.png"
+                alt="PolicyPro cover"
+                loading="lazy"
+              />
               <span class="project-year">2023-2024</span>
             </div>
             <div class="project-header">
@@ -390,6 +446,8 @@
                   href="https://www.congressionalappchallenge.us/23-nc12/"
                   class="link-btn"
                   title="Article"
+                  target="_blank"
+                  rel="noopener"
                   ><img src="assets/logos/article-logo.png" alt="Article"
                 /></a>
               </div>
@@ -426,7 +484,11 @@
           <!---------------------------------- UV Shield -------------------------------->
           <div class="card project-card">
             <div class="project-cover">
-              <img src="assets/uv-pics/uv1.png" alt="UV Shield cover" />
+              <img
+                src="assets/uv-pics/uv1.png"
+                alt="UV Shield cover"
+                loading="lazy"
+              />
               <span class="project-year">2022-2023</span>
             </div>
             <div class="project-header">
@@ -448,12 +510,16 @@
                   href="https://www.iredellfreenews.com/news-features/2023/south-iredell-high-team-qualifies-for-innovation-summit-in-houston/"
                   class="link-btn"
                   title="Article"
+                  target="_blank"
+                  rel="noopener"
                   ><img src="assets/logos/article-logo.png" alt="Article"
                 /></a>
                 <a
                   href="https://docs.google.com/presentation/d/1Cp3Gxi-j-zhoC4b_8CaXaSIqH7oDdsxhX6W0BHTem4A/present?slide=id.p"
                   class="link-btn"
                   title="Poster"
+                  target="_blank"
+                  rel="noopener"
                   ><img src="assets/logos/poster-logo.png" alt="Poster"
                 /></a>
               </div>
@@ -503,7 +569,11 @@
           <!---------------------------------- TimeWise -------------------------------->
           <div class="card project-card">
             <div class="project-cover">
-              <img src="assets/timewise.png" alt="TimeWise cover" />
+              <img
+                src="assets/timewise.png"
+                alt="TimeWise cover"
+                loading="lazy"
+              />
               <span class="project-year">2023</span>
             </div>
             <div class="project-header">
@@ -524,24 +594,32 @@
                   href="https://devpost.com/software/timewise-82y90w"
                   class="link-btn"
                   title="Devpost"
+                  target="_blank"
+                  rel="noopener"
                   ><img src="assets/logos/devpost-logo.png" alt="Devpost"
                 /></a>
                 <a
                   href="https://abc45.com/news/local/app-solutely-brilliant-north-carolina-students-shine-in-state-wide-app-development-competition"
                   class="link-btn"
                   title="Article"
+                  target="_blank"
+                  rel="noopener"
                   ><img src="assets/logos/article-logo.png" alt="Article"
                 /></a>
                 <a
                   href="https://governor.nc.gov/news/press-releases/2023/07/18/north-carolina-high-school-students-win-ready-set-app-development-competition"
                   class="link-btn"
                   title="Article"
+                  target="_blank"
+                  rel="noopener"
                   ><img src="assets/logos/article-logo.png" alt="Article"
                 /></a>
                 <a
                   href="https://drive.google.com/file/d/1ewU3xvfapQKi6PibBA5-GbrRt0uRnHQ-/view?usp=sharing"
                   class="link-btn"
                   title="YouTube"
+                  target="_blank"
+                  rel="noopener"
                   ><img src="assets/logos/youtube-logo.png" alt="YouTube"
                 /></a>
               </div>

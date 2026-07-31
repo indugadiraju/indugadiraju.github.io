@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Indu Gadiraju</title>
+    <meta
+      name="description"
+      content="Indu Gadiraju — Stanford student studying CS (AI), math, and philosophy. Exploring applied AI, robotics, environmental sensing, and community-driven technology."
+    />
     <link rel="icon" type="image/png" href="/assets/website_favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,12 +16,9 @@
       href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap"
       rel="stylesheet"
     />
+    <link rel="preload" href="/assets/sky.jpg" as="image" />
     <link rel="stylesheet" href="/style.css" />
     <script src="/script.js" defer></script>
-    <script
-      type="module"
-      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
-    ></script>
   </head>
   <body class="home">
     <div class="page">
@@ -26,6 +27,11 @@
           <div>Indu</div>
           <div>Gadiraju</div>
         </div>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
         <nav>
           <a href="index.html" aria-current="page">Home</a>
           <a href="projects.html">Projects</a>
@@ -44,6 +50,7 @@
                 src="assets/headshot.png"
                 alt="Headshot of Indu Gadiraju"
                 class="headshot"
+                loading="lazy"
               />
             </div>
             <div class="home-paragraphs">
@@ -61,10 +68,11 @@
                 I'm especially interested in applied AI, embedded systems and
                 robotics, environmental sensing, and building technology with
                 tangible community impact – which I've explored through
-                <a href="#projects" class="intro-link"> a range of projects</a>.
-                Beyond tech, I enjoy
-                <a href="#writing" class="intro-link"> writing</a>, design, and
-                interdisciplinary detours.
+                <a href="projects.html" class="intro-link">
+                  a range of projects</a
+                >. Beyond tech, I enjoy
+                <a href="writing.html" class="intro-link"> writing</a>, design,
+                and interdisciplinary detours.
               </p>
             </div>
           </div>
@@ -109,11 +117,18 @@
           class="pill"
           href="https://www.linkedin.com/in/indugadiraju/"
           title="LinkedIn"
+          target="_blank"
+          rel="noopener"
           ><img src="assets/logos/linkedin-logo.png" alt="LinkedIn" /><span
             >LinkedIn</span
           ></a
         >
-        <a class="pill" href="https://github.com/indugadiraju" title="GitHub"
+        <a
+          class="pill"
+          href="https://github.com/indugadiraju"
+          title="GitHub"
+          target="_blank"
+          rel="noopener"
           ><img src="assets/logos/github-logo.png" alt="GitHub" /><span
             >GitHub</span
           ></a
@@ -122,11 +137,18 @@
           class="pill"
           href="https://indugadiraju.substack.com/"
           title="Substack"
+          target="_blank"
+          rel="noopener"
           ><img src="assets/logos/substack-logo.png" alt="Substack" /><span
             >Substack</span
           ></a
         >
-        <a class="pill" href="https://x.com/indugadiraju" title="X"
+        <a
+          class="pill"
+          href="https://x.com/indugadiraju"
+          title="X"
+          target="_blank"
+          rel="noopener"
           ><img src="assets/logos/x-logo.png" alt="X" /><span>X</span></a
         >
       </div>

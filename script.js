@@ -1,7 +1,57 @@
 /* .js files add interaction to your website */
 
-// Dropdown functionality for project cards
+// Cursor glow bubble (disabled on touch devices)
+(function () {
+  if ("ontouchstart" in window) return;
+
+  var glow = document.createElement("div");
+  glow.className = "cursor-glow";
+  (document.body || document.documentElement).appendChild(glow);
+
+  var mx = 0,
+    my = 0,
+    ticking = false;
+
+  document.addEventListener("mousemove", function (e) {
+    mx = e.clientX;
+    my = e.clientY;
+    if (!ticking) {
+      ticking = true;
+      requestAnimationFrame(function () {
+        glow.style.left = mx + "px";
+        glow.style.top = my + "px";
+        glow.style.opacity = "1";
+        ticking = false;
+      });
+    }
+  });
+
+  document.addEventListener("mouseleave", function () {
+    glow.style.opacity = "0";
+  });
+})();
+
+// Mobile nav toggle
 document.addEventListener("DOMContentLoaded", function () {
+  const navToggle = document.querySelector(".nav-toggle");
+  const nav = document.querySelector("nav");
+
+  if (navToggle && nav) {
+    navToggle.addEventListener("click", function () {
+      navToggle.classList.toggle("active");
+      nav.classList.toggle("open");
+    });
+
+    // Close menu when a nav link is clicked
+    nav.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        navToggle.classList.remove("active");
+        nav.classList.remove("open");
+      });
+    });
+  }
+
+  // Dropdown functionality for project cards
   const dropdownButtons = document.querySelectorAll(".dropdown-btn");
 
   dropdownButtons.forEach((button) => {
@@ -95,7 +145,6 @@ document.addEventListener("DOMContentLoaded", function () {
       cmd.style.visibility = "hidden";
       cmd.style.width = "auto";
       cmd.style.overflow = "visible";
-      const fullWidth = cmd.scrollWidth;
       const charWidths = [];
       for (let i = 1; i <= text.length; i++) {
         cmd.textContent = text.slice(0, i);
@@ -232,6 +281,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let scrollLeft;
     let hasDragged = false;
 
+    // Mouse events
     filmstrip.addEventListener("mousedown", (e) => {
       isDown = true;
       hasDragged = false;
@@ -258,6 +308,34 @@ document.addEventListener("DOMContentLoaded", function () {
       if (Math.abs(walk) > 5) hasDragged = true;
       filmstrip.scrollLeft = scrollLeft - walk;
     });
+
+    // Touch events for mobile
+    filmstrip.addEventListener(
+      "touchstart",
+      (e) => {
+        isDown = true;
+        hasDragged = false;
+        startX = e.touches[0].pageX - filmstrip.offsetLeft;
+        scrollLeft = filmstrip.scrollLeft;
+      },
+      { passive: true },
+    );
+
+    filmstrip.addEventListener("touchend", () => {
+      isDown = false;
+    });
+
+    filmstrip.addEventListener(
+      "touchmove",
+      (e) => {
+        if (!isDown) return;
+        const x = e.touches[0].pageX - filmstrip.offsetLeft;
+        const walk = (x - startX) * 1.5;
+        if (Math.abs(walk) > 5) hasDragged = true;
+        filmstrip.scrollLeft = scrollLeft - walk;
+      },
+      { passive: true },
+    );
 
     if (lightbox) {
       filmstrip.querySelectorAll(".frame-image").forEach((frame) => {
